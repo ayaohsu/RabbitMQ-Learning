@@ -11,6 +11,8 @@ Message protocals: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These are _
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-diagram.png)
 Advanced Message Queuing Protocol
 
+RabbitMQ is coded in Erland language to implement the AMQP protocal
+
 ### Architecture
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-architecture.jpg)
 - One single TCP connection
