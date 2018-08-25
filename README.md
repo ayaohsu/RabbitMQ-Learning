@@ -3,8 +3,11 @@ This is the repo for RabbitMQ Tutorial and Sandbox code
 
 ## Introduction
 Message Queue: used for __inter-process communication__, or __inter-thread communication__ within the same process
+
 Message Broker: an intermediary program module that translates a message from the formal messaging protocol of the sender to the formal messaging protocol of the receiver. It is for the purpose of decoupling.
+
 Message protocals: AMQP(RabbitMQ implements this), MQTT, STOMP, etc.
+
 ### 'Hello World'
 Terms:
 - A producer is a user application that sends messages
