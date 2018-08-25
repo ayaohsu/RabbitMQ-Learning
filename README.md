@@ -11,6 +11,11 @@ Message protocals: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These are _
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-diagram.png)
 Advanced Message Queuing Protocol
 
+### Architecture
+![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-architecture.jpg)
+- One single TCP connection
+- Channel on the server side to multicast; de-multicast on the client side
+
 ### 'Hello World'
 Terms:
 - A producer is a user application that sends messages
