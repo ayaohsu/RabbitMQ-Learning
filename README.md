@@ -2,13 +2,14 @@
 This is the repo for RabbitMQ Tutorial and Sandbox code
 
 ## Introduction
-Message Queue: used for __inter-process communication__, or __inter-thread communication__ within the same process
+__Message Queue__: used for __inter-process communication__, or __inter-thread communication__ within the same process
 
-Message Broker: an intermediary program module that translates a message from the formal messaging protocol of the sender to the formal messaging protocol of the receiver. It is for the purpose of decoupling.
+__Message Broker__: an intermediary program module that translates a message from the formal messaging protocol of the sender to the formal messaging protocol of the receiver. It is for the purpose of decoupling.
 
-Message protocals: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These are __application layer__ protocals.
+__Message protocals__: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These are __application layer__ protocals.
 
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-diagram.png)
+
 Advanced Message Queuing Protocol
 
 RabbitMQ is coded in Erland language to implement the AMQP protocal
