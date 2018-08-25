@@ -6,7 +6,7 @@ Message Queue: used for __inter-process communication__, or __inter-thread commu
 
 Message Broker: an intermediary program module that translates a message from the formal messaging protocol of the sender to the formal messaging protocol of the receiver. It is for the purpose of decoupling.
 
-Message protocals: AMQP(RabbitMQ implements this), MQTT, STOMP, etc.
+Message protocals: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These are __application layer__ protocals.
 
 ### 'Hello World'
 Terms:
