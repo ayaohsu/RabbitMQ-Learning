@@ -9,6 +9,7 @@ Message Broker: an intermediary program module that translates a message from th
 Message protocals: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These are __application layer__ protocals.
 
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-diagram.png)
+Advanced Message Queuing Protocol
 
 ### 'Hello World'
 Terms:
