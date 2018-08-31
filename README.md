@@ -68,3 +68,8 @@ https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 `rabbitmqctl`
 - To list all the queues:
 `rabbitmqctl list_queues`
+
+### Virtual host
+- provides logical groupinp, separation of physical resources and resource permissions
+- when an AMQP client connects to RabbitMQ, it specifies a vhost name to connect to
+- if the authentication succeeds and the credential provided by the clients was granted, connection is established
