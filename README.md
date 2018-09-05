@@ -23,9 +23,9 @@ RabbitMQ is coded in Erland language to implement the AMQP protocal
 Terms:
 - A producer is a user application that sends messages
 - A queue is a buffer that stores messages
-- A consumer is a user application that receives messages.
+- A consumer is a user application that receives messages
 
-In RabbitMQ a message can never be sent directly to the queue, it always needs to go through an exchange.
+In RabbitMQ, a message can never be sent directly to the queue, it always needs to go through an exchange.
 Exchange: Exchanges take a message and route it into zero or more queues
 
 Queue: 
@@ -34,13 +34,13 @@ Queue:
 - Bindings
   - Bindings are rules that exchanges use to route messages to queues
 
-Model:
-https://www.rabbitmq.com/tutorials/amqp-concepts.html
-
 ### Work Queue
-The main idea behind Work Queues (aka: Task Queues) is to avoid doing a resource-intensive task immediately and having to wait for it to complete
-
-We encapsulate a task as a message and send it to the queue
+- The main idea behind Work Queues (aka: Task Queues) is to avoid doing a resource-intensive task immediately and having to wait for it to complete
+- We encapsulate a task as a message and send it to the queue
+- RabbitMQ uses round-robin to distribute the messages to the consumers
+- __Ack(nowledgment)__: consumer sends back an ack to RabbitMQ, to indicate that the message has been received and processed and that RabbitMQ is free to delete it.
+- If a consumer dies (connection is lost) without sending an ack, RabbitMQ will re-queue it. It will then quickly redeliver it to another consumer.
+- This is to make sure that no message is lost and not processed.
 
 ### Publish/Subscribe
 exchange type: 
@@ -68,3 +68,8 @@ https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 `rabbitmqctl`
 - To list all the queues:
 `rabbitmqctl list_queues`
+
+### Virtual host
+- provides logical groupinp, separation of physical resources and resource permissions
+- when an AMQP client connects to RabbitMQ, it specifies a vhost name to connect to
+- if the authentication succeeds and the credential provided by the clients was granted, connection is established
