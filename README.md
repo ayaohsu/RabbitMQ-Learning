@@ -51,6 +51,7 @@ exchange type:
   - Broadcast all the messages it receives to all the queues it knows
 
 Binding: an exchange can __bind__ with a queue
+The value of `routing_key` is ignored for a `fanout` exchange to forward a message
 
 ### Topics
 Topic Exchange: 
