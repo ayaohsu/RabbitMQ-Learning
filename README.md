@@ -50,9 +50,14 @@ exchange type:
 - Fanout Exchange:
   - Broadcast all the messages it receives to all the queues it knows
 
-Binding: an exchange can __bind__ with a queue
+Binding: A binding is a relationship between an exchange and a queue. It can be simply read as: the queue is interested in messages from the exchange
 
 The value of `routing_key` is ignored for a `fanout` exchange to forward a message
+
+### Routing
+Binding: relationship between an exchange and a queue. Can have an extra parameter of `routing_key`
+It is perfectly legal to bind multiple queues with the same binding key
+Direct Exchange: routes a message whose `binding key` matches the `routing key` of the message
 
 ### Topics
 Topic Exchange: 
