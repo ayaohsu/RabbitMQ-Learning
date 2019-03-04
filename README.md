@@ -44,8 +44,6 @@ Queue:
 
 ### Publish/Subscribe
 exchange type: 
-- Direct Exchange:
-  - Round-robin dispatching
 - Fanout Exchange:
   - Broadcast all the messages it receives to all the queues it knows
   - The value of `routing_key` is ignored for a `fanout` exchange to forward a message
@@ -55,7 +53,7 @@ __Binding__: A binding is a relationship between an exchange and a queue. It can
 
 __routing_key__: a property of a binding, which is the relationship between queue and exchange 
 
-Direct Exchange: routes a message whose `binding key` matches the `routing key` of the binding
+Direct Exchange: routes a message to all the queues whose `binding key` matches the `routing key` of the binding
 
 ### Topics
 Topic Exchange: 
