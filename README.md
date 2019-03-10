@@ -51,17 +51,19 @@ exchange type:
 ### Routing
 __Binding__: A binding is a relationship between an exchange and a queue. It can be simply read as: the queue is interested in messages from the exchange
 
-__routing_key__: a property of a binding, which is the relationship between queue and exchange 
+__binding_key__: a property of a binding, which is the relationship between queue and exchange 
+__routing_key__: the routing information we provide when sending a message
 
 Direct Exchange: routes a message to all the queues whose `binding key` matches the `routing key` of the binding
 
 ### Topics
 Topic Exchange: 
-- Messages sent to topic exchange can't have an arbitrary routing_key - it must be a list of words, delimited by dots.
+- Messages sent to topic exchange can't have an arbitrary routing_key - __it must be a list of words, delimited by dots.__
 - Binding key: must be in the same format
-- Two special chars:
+- Two special chars for binding key
   - '*' can substitute for exactly one word
   - '#' can substitute for zero or more worlds
+- Please note that wild card only applies to binding key, but not routing key
 
 ## Resource
 https://www.rabbitmq.com/tutorials/tutorial-one-python.html
