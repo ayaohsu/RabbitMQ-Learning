@@ -1,5 +1,6 @@
 ## RabbitMQ-Learning
 This is the repo for RabbitMQ Tutorial and Sandbox code
+__RabbitMQ__ is a message-broker middleware software that implements AMQP protocol.
 
 ## Introduction
 __Message Queue__: used for __inter-process communication__, or __inter-thread communication__ within the same process
