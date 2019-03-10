@@ -1,5 +1,6 @@
 ## RabbitMQ-Learning
 __RabbitMQ__ is a message-broker middleware software that implements AMQP protocol.
+
 This is the repo for RabbitMQ Tutorial and Sandbox code
 
 ## Introduction
