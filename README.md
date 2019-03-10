@@ -43,21 +43,21 @@ Queue:
 - This is to make sure that no message is lost and not processed.
 
 ### Publish/Subscribe
-exchange type: 
-- Fanout Exchange:
+Exchange type: Fanout
   - Broadcast all the messages it receives to all the queues it knows
   - The value of `routing_key` is ignored for a `fanout` exchange to forward a message
 
 ### Routing
+Exchange Type: Direct
+- It routes a message to all the queues whose `binding key` matches the `routing key` of the binding
+
 __Binding__: A binding is a relationship between an exchange and a queue. It can be simply read as: the queue is interested in messages from the exchange
 
 __binding_key__: a property of a binding, which is the relationship between queue and exchange 
 __routing_key__: the routing information we provide when sending a message
 
-Direct Exchange: routes a message to all the queues whose `binding key` matches the `routing key` of the binding
-
 ### Topics
-Topic Exchange: 
+Exchange Type: Topic
 - Messages sent to topic exchange can't have an arbitrary routing_key - __it must be a list of words, delimited by dots.__
 - Binding key: must be in the same format
 - Two special chars for binding key
