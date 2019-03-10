@@ -80,4 +80,4 @@ https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 - when an AMQP client connects to RabbitMQ, it specifies a vhost name to connect to
 - if the authentication succeeds and the credential provided by the clients was granted, connection is established
 
-Remaining tasks: understand application rabbitMQ setup, understand rabbitMQ console usage
+_Remaining tasks: understand application rabbitMQ setup, understand rabbitMQ console usage_
