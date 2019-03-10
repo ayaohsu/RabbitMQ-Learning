@@ -1,6 +1,6 @@
 ## RabbitMQ-Learning
-This is the repo for RabbitMQ Tutorial and Sandbox code
 __RabbitMQ__ is a message-broker middleware software that implements AMQP protocol.
+This is the repo for RabbitMQ Tutorial and Sandbox code
 
 ## Introduction
 __Message Queue__: used for __inter-process communication__, or __inter-thread communication__ within the same process
@@ -79,3 +79,5 @@ https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 - provides logical groupinp, separation of physical resources and resource permissions
 - when an AMQP client connects to RabbitMQ, it specifies a vhost name to connect to
 - if the authentication succeeds and the credential provided by the clients was granted, connection is established
+
+Remaining tasks: understand application rabbitMQ setup, understand rabbitMQ console usage
