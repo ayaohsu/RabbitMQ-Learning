@@ -30,11 +30,20 @@ Terms:
 In RabbitMQ, a message can never be sent directly to the queue, it always needs to go through an exchange.
 Exchange: Exchanges take a message and route it into zero or more queues
 
-Queue: 
-- Name
-- Durability
+Durability is a queue's property:
   - Durable queues are persisted to disk and thus survive broker restarts
   - It does not make the messages persistent
+```
+channel.queue_declare(queue='hello', durable=True)
+```
+
+Persistence is the message's property:
+  - To mark a message as persistent, set its delivery mode to 2
+```
+properties=pika.BasicProperties(
+                         delivery_mode = 2, # make message persistent
+                      ))
+```
 
 ### Work Queue
 - The main idea behind Work Queues (aka: Task Queues) is to avoid doing a resource-intensive task immediately and having to wait for it to complete
