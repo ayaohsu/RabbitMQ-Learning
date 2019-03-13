@@ -40,7 +40,10 @@ channel.queue_declare(queue='hello', durable=True)
 Persistence is the message's property:
   - To mark a message as persistent, set its delivery mode to 2
 ```
-properties=pika.BasicProperties(
+channel.basic_publish(exchange='',
+                      routing_key="task_queue",
+                      body=message,
+                      properties=pika.BasicProperties(
                          delivery_mode = 2, # make message persistent
                       ))
 ```
