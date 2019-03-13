@@ -1,9 +1,8 @@
-## RabbitMQ-Learning
-__RabbitMQ__ is a message-broker middleware software that implements AMQP protocol.
-
 This is the repo for RabbitMQ Tutorial and Sandbox code
 
 ## Introduction
+__RabbitMQ__: a message-broker middleware software that implements AMQP protocol (Advanced Message Queuing Protocol, an application layer protocol for message-broker). It is implementedin Erland language.
+
 __Message Queue__: used for __inter-process communication__, or __inter-thread communication__ within the same process
 
 __Message Broker__: an intermediary program module that translates a message from the formal messaging protocol of the sender to the formal messaging protocol of the receiver. It is for the purpose of decoupling.
@@ -11,10 +10,6 @@ __Message Broker__: an intermediary program module that translates a message fro
 __Message protocals__: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These are __application layer__ protocals.
 
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-diagram.png)
-
-Advanced Message Queuing Protocol
-
-RabbitMQ is coded in Erland language to implement the AMQP protocal
 
 ### Architecture
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-architecture.jpg)
