@@ -12,9 +12,9 @@ __Message protocals__: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These a
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-diagram.png)
 
 ### Architecture
-![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-architecture.jpg)
 - One single TCP connection
 - Channel on the server side to multicast; de-multicast on the client side
+![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-architecture.jpg)
 
 ### 'Hello World'
 Terms:
