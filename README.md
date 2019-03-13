@@ -33,8 +33,8 @@ Exchange: Exchanges take a message and route it into zero or more queues
 Queue: 
 - Name
 - Durability
-- Bindings
-  - Bindings are rules that exchanges use to route messages to queues
+  - Durable queues are persisted to disk and thus survive broker restarts
+  - It does not make the messages persistent
 
 ### Work Queue
 - The main idea behind Work Queues (aka: Task Queues) is to avoid doing a resource-intensive task immediately and having to wait for it to complete
