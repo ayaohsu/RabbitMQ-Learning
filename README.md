@@ -76,7 +76,7 @@ Exchange Type: __Topic__
 
 ## Resource
 https://www.rabbitmq.com/tutorials/tutorial-one-python.html
-
+https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-rabbitmq.html
 
 ### Virtual host
 - provides logical groupinp, separation of physical resources and resource permissions
