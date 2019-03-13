@@ -18,12 +18,12 @@ __Message protocals__: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These a
 
 ### 'Hello World'
 Terms:
-- A producer is a user application that sends messages
-- A queue is a buffer that stores messages
-- A consumer is a user application that receives messages
+- A __producer__ is a user application that sends messages
+- A __queue__ is a buffer that stores messages
+- A __consumer__ is a user application that receives messages
 
 In RabbitMQ, a message can never be sent directly to the queue, it always needs to go through an exchange.
-Exchange: Exchanges take a message and route it into zero or more queues
+__Exchange__: Exchanges take a message and route it into zero or more queues
 
 Durability is a queue's property:
   - Durable queues are persisted to disk and thus survive broker restarts
@@ -52,12 +52,12 @@ channel.basic_publish(exchange='',
 - This is to make sure that no message is lost and not processed.
 
 ### Publish/Subscribe
-Exchange type: Fanout
+Exchange type: __Fanout__
   - Broadcast all the messages it receives to all the queues it knows
   - The value of `routing_key` is ignored for a `fanout` exchange to forward a message
 
 ### Routing
-Exchange Type: Direct
+Exchange Type: __Direct__
 - It routes a message to all the queues whose `binding key` matches the `routing key` of the binding
 
 __Binding__: A binding is a relationship between an exchange and a queue. It can be simply read as: the queue is interested in messages from the exchange
@@ -66,7 +66,7 @@ __binding_key__: a property of a binding, which is the relationship between queu
 __routing_key__: the routing information we provide when sending a message
 
 ### Topics
-Exchange Type: Topic
+Exchange Type: __Topic__
 - Messages sent to topic exchange can't have an arbitrary routing_key - __it must be a list of words, delimited by dots.__
 - Binding key: must be in the same format
 - Two special chars for binding key
@@ -77,15 +77,20 @@ Exchange Type: Topic
 ## Resource
 https://www.rabbitmq.com/tutorials/tutorial-one-python.html
 
-## Windows Resouce
-- RabbitMQ command line on localhost: 
-`rabbitmqctl`
-- To list all the queues:
-`rabbitmqctl list_queues`
 
 ### Virtual host
 - provides logical groupinp, separation of physical resources and resource permissions
 - when an AMQP client connects to RabbitMQ, it specifies a vhost name to connect to
 - if the authentication succeeds and the credential provided by the clients was granted, connection is established
 
-_Remaining tasks: understand application rabbitMQ setup, understand rabbitMQ console usage_
+_Remaining tasks: understand application rabbitMQ setup, understand rabbitMQ console usage
+look at isatmrabbit
+vhost note
+are we acking messages?
+are we persisting the messages?
+are we making the queue durable?
+what is our naming convention?
+are we using exclusive queues?
+how many consumers are there for a queue?
+how many connections are there for a task?
+Draw a rabbit MQ architecture diagram_
