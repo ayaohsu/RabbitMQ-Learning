@@ -12,8 +12,8 @@ __Message protocals__: AMQP(RabbitMQ implements this), MQTT, STOMP, etc. These a
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-diagram.png)
 
 ### Architecture
-- One single TCP connection
-- Channel on the server side to multicast; de-multicast on the client side
+Connection: A connection is a TCP connection between your application and the RabbitMQ broker
+Channel: A channel is a virtual connection inside a connection. When you are publishing or consuming messages from a queue - it's all done over a channel
 ![alt text](https://github.com/ayaohsu/RabbitMQ-Learning/blob/master/bin/AMQP-architecture.jpg)
 
 ### 'Hello World'
