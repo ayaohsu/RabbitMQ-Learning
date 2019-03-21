@@ -43,6 +43,10 @@ channel.basic_publish(exchange='',
                          delivery_mode = 2, # make message persistent
                       ))
 ```
+Message Properties: it's message metadata attributes that can be set when a message is published. Some of the attributes are well-known and mentioned in the AMQP specification. Some examples are:
+- Content type
+- Persistent
+- Time stamp
 
 ### Work Queue
 - The main idea behind Work Queues (aka: Task Queues) is to avoid doing a resource-intensive task immediately and having to wait for it to complete
