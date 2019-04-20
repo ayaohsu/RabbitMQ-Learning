@@ -88,6 +88,16 @@ https://www.cloudamqp.com/blog/2015-05-18-part1-rabbitmq-for-beginners-what-is-r
 - when an AMQP client connects to RabbitMQ, it specifies a vhost name to connect to
 - if the authentication succeeds and the credential provided by the clients was granted, connection is established
 
+### isatm rabbit lib
+RabbitMQ consumer pattern
+Library code:
+1. Have a consumer abstract class. Have a interface to process the messages
+2. When creating a queue, pass in the consumer of the queue
+3. The queue will keep consuming from the rabbitMQ connection, when it gets a message, it calls the consumer to process the message
+
+Application code:
+Construct an application consumer to inherent from the consumer abstract class. Set up connection and channel and queue. Pass the consumer instance to the queue.
+
 _Remaining tasks: understand application rabbitMQ setup, understand rabbitMQ console usage
 look at isatmrabbit
 vhost note
