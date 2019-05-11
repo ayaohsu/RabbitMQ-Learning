@@ -98,6 +98,29 @@ Library code:
 Application code:
 Construct an application consumer to inherent from the consumer abstract class. Set up connection and channel and queue. Pass the consumer instance to the queue.
 
+A RabbitMQ broker is a logical grouping of one or several Erlang nodes, each running the RabbitMQ application and sharing users, virtual hosts, queues, exchanges, bindings, and runtime parameters. Sometimes we refer to the collection of nodes as a cluster.
+Node name: prefix + host. ex: sys-rabbit@itmlnyprabdd01. The nodes for our RabbitMQ broker can be seen in "Overview" tab.
+
+By default, we publish message to exchange synchronously. We send messages with publisher confirms, and if we fail to receive the publisher confirms we log and stop the task.
+
+On consuming from RabbitMQ, here are the three things that happen:
+Deliver (RabbitMQ broker delivers the message to the consumer)
+Process (Consumer processes the message with it's own business logic)
+Ack (Consumer publishes the ACK message to the RabbitMQ broker saying the message was received and properly processed)
+
+There is also one case, that the consumer do not want to ack the message. Say, if a database failure happens, we still want the message in the queue, so it will still be stored. In this case, we stop consuming (but not stopping the task so user will still be able to use it, in this case for database queue consumer). 
+In this case, send reject and stop consuming.
+
+In the phase of processing, there is some chance that it reconnects to the rabbit MQ. In that case, since the connection is different (new vs old) the new connection will not be consumed, rabbitMQ library needs to initialize the consumer again on the new connection. 
+
+The chance is when we process the message, we can be sending the message through the same connection. If sending fails, it will re-create the connection and re-send. That is how we will have a new connection.
+
+Three cases at consuming
+- Successfully receive a message
+- time out (nothing)
+- Failure reply 
+
+
 _Remaining tasks: understand application rabbitMQ setup, understand rabbitMQ console usage
 look at isatmrabbit
 vhost note
