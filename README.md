@@ -43,6 +43,11 @@ channel.basic_publish(exchange='',
                          delivery_mode = 2, # make message persistent
                       ))
 ```
+To gaurantee a lossless delivery, the combination of these two features needs to be utilized:    
+- Messages are persisted so they are not lost if RabbitMQ broker goes down  
+- Publisher confirms are sent so if anything fails (connection lost), publisher knows to deliver the message again  
+One caveat is a message can be delivered more than once, for example, if publisher confirms are lost. Developers need to be aware and make the application not subject from getting duplicate messages.    
+
 Message Properties: it's message metadata attributes that can be set when a message is published. Some of the attributes are well-known and mentioned in the AMQP specification. Some examples are:
 - Content type
 - Persistent
